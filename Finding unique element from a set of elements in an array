@@ -1,0 +1,29 @@
+//finding unique element when all other elements occurs twice 
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int findUniqueElement(vector<int>a){
+    int ans =0;
+    for(int i=0;i<a.size();i++){
+        ans =ans^a[i];
+    }
+    return ans;
+}
+
+int main(){
+    int n;
+    cout<<"Enter the size of the vector: "<<endl;
+    cin>>n;
+    //declaring the vector
+    vector<int>a(n);
+    cout<<"enter the elements of the array: "<<endl;
+    for(int i=0;i<a.size();i++){
+        cin>>a[i];
+
+    }
+    //calling a function to return the unique element
+    int unique_element = findUniqueElement(a);
+    cout<<"the unique elelemnt is : "<<unique_element<<endl;
+    return 0;
+}
