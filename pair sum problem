@@ -1,0 +1,26 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    int n;
+    vector<int>arr(8);
+   
+    //input the elements of the array
+  
+
+    for(int i=0;i<arr.size();i++){
+        cin>>arr[i];
+    }
+    int sum =9;
+    //outer loop 
+    for(int i=0;i<arr.size();i++){
+        int element = arr[i];
+        //for the pair
+        for(int j=i+1;j<arr.size();j++){
+            //cout<<"("<< element<<","<<arr[j]<<")"<<endl;
+            if(element+arr[j]==9){
+                cout<<"Pair sum found: "<<"("<< element<<","<<arr[j]<<")"<<endl;
+            }
+        }   
+    }
+}
